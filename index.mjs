@@ -1,5 +1,10 @@
 import 'dotenv/config'
 import NDK, { NDKEvent, NDKPrivateKeySigner } from "@nostr-dev-kit/ndk";
+
+const privkey = process.env.NOSTR_PRIVKEY
+const lastfmuser = process.env.LASTFM_USER
+const lastfmapikey = process.env.LASTFM_APIKEY
+
 if (!privkey) throw new Error("expected NOSTR_PRIVKEY env")
 if (!lastfmuser) throw new Error("expected LASTFM_USER env")
 if (!lastfmapikey) throw new Error("expected LASTFM_APIKEY env")
