@@ -10,7 +10,7 @@ if (!lastfmuser) throw new Error("expected LASTFM_USER env")
 if (!lastfmapikey) throw new Error("expected LASTFM_APIKEY env")
 
 const signer = new NDKPrivateKeySigner(process.env.NOSTR_PRIVKEY)
-const ndk = new NDK({ signer: signer, explicitRelayUrls: ["wss://relay,yozora.world", "wss://relay.damus.io", "wss://relay.nostr.band", "wss://eden.nostr.land"]});
+const ndk = new NDK({ signer: signer, explicitRelayUrls: ["wss://relay.yozora.world", "wss://relay.damus.io", "wss://relay.nostr.band", "wss://eden.nostr.land"]});
 await ndk.connect(1000)
 
 let lastPlaying = "";
